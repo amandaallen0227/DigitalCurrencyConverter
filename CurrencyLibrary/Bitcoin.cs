@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CurrencyLibrary;
 
-namespace CurrencyConverter
+namespace CurrencyLibrary
 {
-    class Program
+    public class Bitcoin : Currency
     {
-        static void Main(string[] args)
-        {
 
-        }
+
+
     }
 }
