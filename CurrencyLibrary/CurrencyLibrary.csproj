@@ -44,7 +44,6 @@
     <Compile Include="Bitcoin.cs" />
     <Compile Include="Cash.cs" />
     <Compile Include="Currency.cs" />
-    <Compile Include="IConvertable.cs" />
     <Compile Include="Etherium.cs" />
     <Compile Include="Litecoin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

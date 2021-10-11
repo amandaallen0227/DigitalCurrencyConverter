@@ -14,29 +14,43 @@ namespace CurrencyLibrary
 
 
         //ctor
-        public Cash(decimal amount, decimal cashValue)
+        public Cash(decimal cashValue)
         {
-            Amount = amount;
             CashValue = 1;
         }
 
 
         //method
-        public override decimal GetCashConversion()
+        public decimal GetCashConversion(decimal amount)
         {
-            decimal cash = Amount * CashValue;
-                return cash;
-         }
-
-        public override decimal GetBitcoinConversion()
-        {
-            decimal bitcoin = Amount * CashValue;
+            decimal cashValue = amount / CashValue;
+                return cashValue;
         }
-               
-        public override decimal GetEtheriumConversion();
-              
-        public override decimal GetLitecoinConversion();
 
+        //Digital Currency conversions
+        //Conversion for  Cash to Bitcoin
+        public decimal GetBitcoin(decimal amount)
+        {
+            decimal cashAmount = GetCashConversion(amount);
+            decimal bitcoin = cashAmount * 1.496m;
+            return bitcoin;
+        }
+
+        //Converion for Cash to Etherium
+        public decimal GetEtherium(decimal amount)
+        {
+            decimal cashAmount = GetCashConversion(amount);
+            decimal etherium = cashAmount * 0.11723m;
+            return etherium;
+        }
+
+        //Conversion for Cash to Litecoin
+        public decimal GetLitecoin(decimal amount)
+        {
+            decimal cashAmount = GetCashConversion(amount);
+            decimal litecoin = cashAmount * 0.023808m;
+            return litecoin;
+        }
 
     }
 }

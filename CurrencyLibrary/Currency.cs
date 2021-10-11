@@ -6,20 +6,9 @@ using System.Threading.Tasks;
 
 namespace CurrencyLibrary
 {
-    public abstract class Currency : IConvertable
+    public abstract class Currency
     {
-        public decimal Amount { get; set; }
         public decimal CashValue { get; set; }
-      
-
-        public abstract decimal GetConversion();
-
-        //public abstract decimal GetBitcoinConversion();
-
-        //public abstract decimal GetEtheriumConversion();
-       
-        //public abstract decimal GetLitecoinConversion();
-
 
     }
 }

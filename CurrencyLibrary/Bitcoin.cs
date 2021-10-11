@@ -10,6 +10,21 @@ namespace CurrencyLibrary
     {
 
 
+        //ctor
+        public Bitcoin(decimal cashValue)
+        {
+            CashValue = 1.496m;
+        }
+
+
+        //method
+        public decimal GetBitcoinConversion(decimal amount)
+        {
+            decimal cashValue = amount / CashValue;
+            return cashValue;
+        }
+
+        
 
     }
 }

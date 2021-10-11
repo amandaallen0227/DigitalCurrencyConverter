@@ -8,5 +8,18 @@ namespace CurrencyLibrary
 {
     public class Litecoin : Currency
     {
+        //ctor
+        public Litecoin(decimal cashValue)
+        {
+            CashValue = 0.023808m;
+        }
+
+
+        //method
+        public decimal GetLitecoinConversion(decimal amount)
+        {
+            decimal cashValue = amount / CashValue;
+            return cashValue;
+        }
     }
 }
